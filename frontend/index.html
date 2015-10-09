@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #map {
+        height:90%;
+    }
+    video{
+        margin: 5px;
+    }
+    .video_container{
+        padding:15px;
+        background-color: rgb(230,230,230);
+        border-radius:10px;
+    }
+    p{
+        padding: 0;
+        border: 0;
+        margin: 5px 0 0 0;
+    }
+    #menu{
+        position: relative;
+        padding: 0px;
+        background-color: rgb(180,209,257);
+        height:10%;
+    }
+    input{
+        padding: 5px;
+    }
+    #menu div{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+    </style>
+</head>
+
+<body>
+<div id='map'></div>
+<div id='menu'>
+    <div>
+    <input type="text" id="marker-title" placeholder="marker title"></input>
+    <input type="text" id="lat" placeholder="marker lat" value=37.421983></input>
+    <input type="text" id="lng" placeholder="marker lng" value=-122.171673></input>
+    <input type="text" id="link" placeholder="link to youtube video"></input>
+    <input type="text" id="description" placeholder="description"></input>
+    <button id="new-marker">enter</button>
+    </div>
+</div>
+<script src="./js/hopo_map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD10XI_Jpz7fft2PzGn6LNiBwdAqt7_Gy8&callback=initMap" async defer></script>
+</body>
+</html>
