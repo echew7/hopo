@@ -7,46 +7,50 @@ var markers = []; //or load from wherever
 function initMap(){
 
 	map = new google.maps.Map(document.getElementById('map'), {
-		center: {lat: 34.574722, lng: -39.012182},
+		center: {lat: 10, lng: 13.38},
 		zoom: 2
 	});
 	loadMarkers(); 
-
-	//non hard coded
-	/*
-	   document.getElementById("new-marker").addEventListener('click', function(){
-	   var marker = new google.maps.Marker({
-	   position:{lat: Number(document.getElementById('lat').value), lng: Number(document.getElementById('lng').value)},
-	   map: map,
-	   title: document.getElementById('marker-title').value
-	   });
-	   marker.addListener('mouseover', function(){
-	   infowindow.setContent('<div class="video_container"><iframe width="320" height="240" src="' + getEmbedLink(document.getElementById('link').value) + '" frameborder="0" allowfullscreen></iframe><p>' + document.getElementById('description').value + '</p></div>');
-	   infowindow.open(map, marker);
-	   });
-	   marker.addListener('mouseout', function(){
-	   infowindow.close();
-	   });
-	   markers.push(marker);
-	   });
-	   */
 }
 
 function createMarkers(i){
 	var marker = markers[i];
 	var m = new google.maps.Marker({
-		position:{lat: Number(marker.lat), lng: Number(marker.lng)},
+		position: {lat: Number(marker.lat), lng: Number(marker.lng)},
 		map: map,
-		title: 'Point of Interest'
+		icon: './images/markericon.png'
 	});
 	var infowindow = new google.maps.InfoWindow();
-	m.addListener('mouseover', function() {
-		infowindow.setContent('<div class="video_container"><iframe width="320" height="240" src="' + getEmbedLink(marker.videoLink) + '" frameborder="0" allowfullscreen></iframe><p>' + marker.description + '</p></div>');
+	m.addListener('mouseover', function(e) {
+		infowindow.setContent('\
+			<div class="profile">\
+				<img class="pic" src="./images/nopic.jpg" >\
+				<div class="info">\
+					<p>' + marker.name + '</p>\
+					<p>' + marker.location + '</p>\
+					<p>' + marker.ocean + ' Ocean' + '</p>\
+					<p>' + marker.description + '</p>\
+				</div>\
+			</div>');
 		infowindow.open(map, m);
 	});
-	m.addListener('mouseout', function(){
+	m.addListener('click', function(e) {
+		map.setZoom(11);
+		map.setCenter(e.latLng);
+		displayVideo(marker.videoLink);
+	});
+	m.addListener('mouseout', function(e) {
 		infowindow.close();
 	});
+}
+
+function displayVideo(videoLink) {
+	document.getElementById('video').src = getEmbedLink(videoLink);
+	document.getElementById('video-container').style.display = 'block';
+	document.getElementById('video-container').onclick = function() {
+		document.getElementById('video-container').style.display = 'none';		
+	document.getElementById('video').src = '';
+	}
 }
 
 function loadMarkers(){
@@ -54,7 +58,7 @@ function loadMarkers(){
 	http.onreadystatechange = function(){
 		if (http.readyState === 4) {
 			if (http.status === 200) {
-				var markers = JSON.parse(http.responseText);
+				markers = JSON.parse(http.responseText);
 				console.log(http.responseText);
 				console.log(markers);
 				for(var i = 0; i < markers.length; i++){

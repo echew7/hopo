@@ -1,0 +1,106 @@
+@font-face {
+    font-family: Autoradiographic;
+    src: url(../fonts/autoradiographic.ttf);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+}
+
+video {
+    margin: 5px;
+}
+
+a {
+    font-family: Autoradiographic;
+}
+
+p {
+    font-family: Autoradiographic;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    overflow: hidden;
+}
+input{
+    padding: 5px;
+}
+
+#nav-bar {
+    background-color: black;
+    height: 130px;
+}
+
+#title {
+    font-size: 64px;
+    font-style: bold;
+    color: white;
+    text-align: center;
+}
+
+#navigation {
+    padding-top: 6px;
+    text-align: center;
+}
+
+#navigation a {
+    margin: 0 25px;
+    color: white;
+    text-decoration: none;
+}
+
+#navigation a:hover {
+    color: #73B6FF;
+}
+
+#map {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#video-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+    opacity: 0.75;
+    display: none;
+}
+
+#video {
+    margin: 55px auto 0 auto;
+    opacity: 1;
+    width: 720px;
+    height: 460px;
+    display: block;
+}
+
+.profile{
+    padding: 5px;
+}
+
+.profile .pic {
+    float: left;
+    height: 80px;
+    width: 80px;
+    margin-right: 10px; 
+}
+
+.profile .info {
+    float: right;
+}
+
+.profile .info p {
+    margin: 4px 0;
+}
+
+.profile .description {
+
+.profile .description {
+    text-align: center;
+ }
