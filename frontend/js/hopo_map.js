@@ -69,7 +69,7 @@ function loadMarkers(){
 			}
 		}
 	}
-	http.open("GET", "http://localhost:3000/api/locations", true);
+	http.open("GET", "./api/locations", true);
 	http.send();
 }
 
