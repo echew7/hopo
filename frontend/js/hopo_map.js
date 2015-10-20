@@ -35,7 +35,7 @@ function createMarkers(i){
 		infowindow.open(map, m);
 	});
 	m.addListener('click', function(e) {
-		map.setZoom(9);
+		map.setZoom(6);
 		map.setCenter(e.latLng);
 		displayVideo(marker.videoLink);
 	});
