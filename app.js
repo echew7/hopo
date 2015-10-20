@@ -11,7 +11,7 @@ var passport = require('passport');
 // db setup
 var PROD_DATABASE_URL = 'mongodb://hopo_aM4SNKWbNjz99kEC:5t8MXTpRc2ghkEYe@ds051933.mongolab.com:51933/hopodb';
 var DEV_DATABASE_URL = 'localhost:27017/hopo';
-mongoose.connect(DEV_DATABASE_URL); 
+mongoose.connect(PROD_DATABASE_URL); 
 
 // create express app
 var app = express();
