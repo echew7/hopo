@@ -18,13 +18,13 @@ function createMarkers(i){
 	var m = new google.maps.Marker({
 		position: {lat: Number(marker.lat), lng: Number(marker.lng)},
 		map: map,
-		icon: './images/markericon.png'
+		icon: './images/blue.png'
 	});
 	var infowindow = new google.maps.InfoWindow();
 	m.addListener('mouseover', function(e) {
 		infowindow.setContent('\
 			<div class="profile">\
-				<img class="pic" src="./images/blue.png" >\
+				<img class="pic" src="./images/nopic.jpg" >\
 				<div class="info">\
 					<p>' + marker.name + '</p>\
 					<p>' + marker.location + '</p>\
