@@ -24,7 +24,7 @@ function createMarkers(i){
 	m.addListener('mouseover', function(e) {
 		infowindow.setContent('\
 			<div class="profile">\
-				<img class="pic" src="./images/nopic.jpg" >\
+				<img class="pic" src="./images/blue.png" >\
 				<div class="info">\
 					<p>' + marker.name + '</p>\
 					<p>' + marker.location + '</p>\
