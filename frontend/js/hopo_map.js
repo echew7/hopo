@@ -43,6 +43,7 @@ function createMarkers(i){
 function displayVideo(videoLink) {
 	document.getElementById('video').src = getEmbedLink(videoLink);
 	document.getElementById('video-container').style.display = 'block';
+	document.getElementById('video-background').style.display = 'block';
 	document.getElementById('video-container').onclick = function() {
 		document.getElementById('video-container').style.display = 'none';		
 		document.getElementById('video').src = '';
