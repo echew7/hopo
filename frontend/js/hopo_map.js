@@ -32,7 +32,7 @@ function createMarkers(i){
 	});
 	m.addListener('click', function(e) {
 //		map.setZoom(2);
-		map.setCenter(e.latLng);
+//		map.setCenter(e.latLng);
 		displayVideo(marker.videoLink);
 	});
 	m.addListener('mouseout', function(e) {
