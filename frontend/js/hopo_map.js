@@ -1,7 +1,3 @@
-//make own infowindow? recenter map to marker after click?
-//NONO KEEP INFOWINDOW FOR HOVER, on click, inject alpha div and play video on top of that. or fullscreen video? whatevs
-//close infowindow when mouseout
-
 var map;
 var markers = []; //or load from wherever
 function initMap(){
@@ -49,7 +45,7 @@ function displayVideo(videoLink) {
 	document.getElementById('video-container').style.display = 'block';
 	document.getElementById('video-container').onclick = function() {
 		document.getElementById('video-container').style.display = 'none';		
-	document.getElementById('video').src = '';
+		document.getElementById('video').src = '';
 	}
 }
 
