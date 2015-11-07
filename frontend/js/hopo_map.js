@@ -4,7 +4,8 @@ function initMap(){
 
 	map = new google.maps.Map(document.getElementById('map'), {
 		center: {lat: 10, lng: 13.38},
-		zoom: 2
+		zoom: 2,
+		disableDefaultUI: true
 	});
 	loadMarkers(); 
 }
