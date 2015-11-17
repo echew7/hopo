@@ -5,8 +5,8 @@ var userController = require('../controllers/user');
 var authController = require('../controllers/auth');
 
 //Create endpoint handlers for /users
-router.route('/')
+/*router.route('/')
   .post(userController.postUsers)
-  .get(authController.isAuthenticated, userController.getUsers);
+  .get(authController.isAuthenticated, userController.getUsers);*/
 
 module.exports = router;
