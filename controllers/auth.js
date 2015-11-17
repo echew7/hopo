@@ -15,7 +15,7 @@ passport.use(new BasicStrategy(
  
       // No user found with that username
       // no error, but we stop the call chain
-      if (!user) { return next(null, false); }
+      if (!user) { return next(null, "Incorrect username."); }
  
       // Make sure the password is correct
       user.verifyPassword(password, function(err, isMatch) {
@@ -23,7 +23,7 @@ passport.use(new BasicStrategy(
         if (err) { return next(err); }
  
         // Password did not match
-        if (!isMatch) { return next(null, false); }
+        if (!isMatch) { return next(null, "Incorrect password."); }
         // Success, we return the user to the next middleware
         return next(null, user);
       });

@@ -3,7 +3,7 @@ var markers = []; //or load from wherever
 function initMap(){
 
 	map = new google.maps.Map(document.getElementById('map'), {
-		center: {lat: 10, lng: 13.38},
+		center: {lat: 33, lng: -29},
 		zoom: 2,
 		disableDefaultUI: true
 	});
@@ -24,8 +24,7 @@ function createMarkers(i){
 				<img class="pic" src="./images/nopic.jpg" >\
 				<div class="info">\
 					<p>' + marker.name + '</p>\
-					<p>' + marker.location + '</p>\
-					<p>' + marker.ocean + ' Ocean' + '</p>\
+					<p>' + marker.ocean + '</p>\
 					<p>' + marker.description + '</p>\
 				</div>\
 			</div>');

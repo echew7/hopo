@@ -57,8 +57,10 @@ exports.authenticateUser = function(req, res) {
                 return;
             } else if(!isMatch){
                 res.json({message: "Wrong password."});
+				return;
             } else {
-                res.json({success: "authenticated!"});
+				res.json({message: "Successfully authenticated!"});
+				return;
             }
         });
     });

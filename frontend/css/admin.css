@@ -1,0 +1,46 @@
+#login-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    display: block;
+    background-color: rgba(0,0,0,0.7);
+}
+
+#map {
+    z-index: 0;
+}
+
+#login-form-container {
+    margin: 100px auto 0 auto;
+    width: 300px;
+    background-color: white;
+    position: relative;
+    padding: 25px;
+}
+
+#login-form-container input {
+    width: 300px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#login-form-container button {
+    width: 300px;
+}
+
+
+#add-location-container {
+    position: absolute;
+    top: 110px;
+    width: 100%;
+    background-color: black;
+    padding: 5px;
+    z-index: 2;
+    text-align: center;
+}
+#add-location-container input {
+    width: 170px;
+    margin: 5px;
+}

@@ -1,7 +1,7 @@
 // We load the Location model
 var Location = require('../models/location');
 var User = require('../models/user');
-var mongoose = require('../node_modules/mongoose');
+//var mongoose = require('../node_modules/mongoose');
 // **********************************
 // POST Locations
 // **********************************
